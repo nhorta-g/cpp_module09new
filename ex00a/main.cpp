@@ -6,11 +6,11 @@
 /*   By: nuno <nuno@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 11:43:22 by nuno              #+#    #+#             */
-/*   Updated: 2024/06/09 19:24:07 by nuno             ###   ########.fr       */
+/*   Updated: 2024/06/06 13:47:47 by nuno             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "BitcoinExchange.hpp"
+#include "btc.hpp"
 
 int main(int ac, char **av) {
 	if (ac != 2) {
