@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nuno <nuno@student.42.fr>                  +#+  +:+       +#+         #
+#    By: nhorta-g <nhorta-g@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/20 15:56:24 by nuno              #+#    #+#              #
-#    Updated: 2024/04/03 12:13:29 by nuno             ###   ########.fr        #
+#    Updated: 2024/06/11 00:02:56 by nhorta-g         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CXX			=	c++
 SRCS		=	main.cpp \
 				BitcoinExchange.cpp
 
-CXXFLAGS	=	-Wall -Wextra -Werror -g -std=c++98 #-fsanitize=address
+CXXFLAGS	=	-Wall -Wextra -Werror -g -std=c++98 -fsanitize=address
 
 RM			=	rm -f
 

@@ -38,20 +38,6 @@ void BitcoinExchange::loadDatabase() {
 	db.close();
 }
 
-// trim from left
-inline std::string& ltrim(std::string& s, const char* t = " \t\n\r\f\v")
-{
-	s.erase(0, s.find_first_not_of(t));
-	return s;
-}
-
-// trim from right
-inline std::string& rtrim(std::string& s, const char* t = " \t\n\r\f\v")
-{
-	s.erase(s.find_last_not_of(t) + 1);
-	return s;
-}
-
 void BitcoinExchange::processInput(const std::string& inputFile) {
 	std::ifstream input(inputFile.c_str());
 	if (!input) {
@@ -62,8 +48,6 @@ void BitcoinExchange::processInput(const std::string& inputFile) {
 //multiplicar. date separado por | do multiplicador
 	std::string line;
 	while (std::getline(input, line)) { //istream& getline(istream& is,string& str, char delim);
-		line = ltrim(line);
-		line = rtrim(line);
 		std::istringstream ss(line);
 		std::string date, valueStr;
 		if (std::getline(ss, date, '|') && std::getline(ss, valueStr)) {
