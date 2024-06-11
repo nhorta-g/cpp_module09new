@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   BitcoinExchange.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nhorta-g <nhorta-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nuno <nuno@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 10:50:55 by nuno              #+#    #+#             */
-/*   Updated: 2024/06/11 00:13:36 by nhorta-g         ###   ########.fr       */
+/*   Updated: 2024/06/11 13:18:55 by nuno             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,10 @@ void BitcoinExchange::loadDataBase(void) {
 
 	std::string line;
 	while (std::getline(db, line)) {
+/*std::istringstream is an input string stream that allows us to read
+from a string as if it were a stream (like reading from std::cin)*/
 		std::istringstream ss(line);
+
 		std::string date;
 		float rate;
 		if (std::getline(ss, date, ',') && ss >> rate) {

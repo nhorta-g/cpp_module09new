@@ -6,19 +6,26 @@
 /*   By: nuno <nuno@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 11:43:22 by nuno              #+#    #+#             */
-/*   Updated: 2024/06/06 13:47:47 by nuno             ###   ########.fr       */
+/*   Updated: 2024/06/11 13:26:59 by nuno             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "btc.hpp"
+#include "RPN.hpp"
 
 int main(int ac, char **av) {
 	if (ac != 2) {
-		std::cerr << "Can't open file. Usage: ""./btc input.txt"" " << std::endl;
+		std::cerr << "Error: Invalid number of arguments" << std::endl;
 		return 1;
 	}
-	BitcoinExchange btcExchange("data.csv");
-	btcExchange.processInput(av[1]);
 
+	RPN rpn;
+
+	try {
+		int result = rpn.evaluate(av[1]);
+		std::cout << result << std::endl;
+	} catch (const std::exception& e) {
+		std::cerr << e.what() << std::endl;
+		return 1;
+	}
 	return 0;
 }

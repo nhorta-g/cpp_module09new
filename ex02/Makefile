@@ -6,18 +6,17 @@
 #    By: nuno <nuno@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/20 15:56:24 by nuno              #+#    #+#              #
-#    Updated: 2024/06/06 13:45:51 by nuno             ###   ########.fr        #
+#    Updated: 2024/06/11 15:21:13 by nuno             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	btc
-
+NAME		=	PmergeMe
 CXX			=	c++
 
 SRCS		=	main.cpp \
-				btc.cpp
+				PmergeMe.cpp
 
-CXXFLAGS	=	-Wall -Wextra -Werror -g -std=c++98 -fsanitize=address
+CXXFLAGS	=	-Wall -Wextra -Werror -g -std=c++98
 
 RM			=	rm -f
 
