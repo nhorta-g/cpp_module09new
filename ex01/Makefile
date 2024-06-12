@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nuno <nuno@student.42.fr>                  +#+  +:+       +#+         #
+#    By: nhorta-g <nhorta-g@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/20 15:56:24 by nuno              #+#    #+#              #
-#    Updated: 2024/06/11 15:08:00 by nuno             ###   ########.fr        #
+#    Updated: 2024/06/12 22:29:43 by nhorta-g         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CXX			=	c++
 SRCS		=	main.cpp \
 				RPN.cpp
 
-CXXFLAGS	=	-Wall -Wextra -Werror -g -std=c++98
+CXXFLAGS	=	-Wall -Wextra -Werror -g -std=c++98  -g -fsanitize=address
 
 RM			=	rm -f
 

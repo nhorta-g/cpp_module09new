@@ -6,7 +6,7 @@
 /*   By: nhorta-g <nhorta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 11:43:22 by nuno              #+#    #+#             */
-/*   Updated: 2024/06/12 21:55:50 by nhorta-g         ###   ########.fr       */
+/*   Updated: 2024/06/12 23:32:49 by nhorta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int main(int argc, char* argv[]) {
 
 	PmergeMe pmerge;
 	pmerge.display(vec, lst);
-	pmerge.measureTime(vec, lst);
+	pmerge.sortAndMeasureTime(vec, lst);
 
 	return 0;
 }

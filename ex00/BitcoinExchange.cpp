@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   BitcoinExchange.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nuno <nuno@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nhorta-g <nhorta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 10:50:55 by nuno              #+#    #+#             */
-/*   Updated: 2024/06/11 13:18:55 by nuno             ###   ########.fr       */
+/*   Updated: 2024/06/12 22:50:13 by nhorta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -186,5 +186,5 @@ bool BitcoinExchange::isValidRateStr(std::string const &rateStr) {
 }
 
 void BitcoinExchange::printError(const std::string& errMsg, const std::string& line) {
-	std::cerr << RED << "Error: " << MAGENTA << errMsg << YELLOW << line << RESET << std::endl;
+	std::cerr << RED << "Error: " << RESET << errMsg << YELLOW << line << RESET << std::endl;
 }
