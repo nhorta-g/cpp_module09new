@@ -6,7 +6,7 @@
 /*   By: nhorta-g <nhorta-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 13:43:44 by nuno              #+#    #+#             */
-/*   Updated: 2024/06/12 23:33:00 by nhorta-g         ###   ########.fr       */
+/*   Updated: 2024/06/13 15:19:22 by nhorta-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,18 @@ public:
 	PmergeMe& operator=(const PmergeMe& other);
 	~PmergeMe();
 
-	void sortVector(std::vector<int>& vec);
-	void sortList(std::list<int>& lst);
 	void display(const std::vector<int>& vec, const std::list<int>& lst);
 	void sortAndMeasureTime(const std::vector<int>& vec, const std::list<int>& lst);
 
 private:
-	std::vector<int> jacobsthalSequence(int n);
+	static const int	_jacobsthal[35];
+	static void	jacobsthalInsert(std::list<int>&, std::list<int>&);
+	static void	binaryJacobsthalInsert(std::vector<int>&, std::vector<int>&);
+	static std::list<int>::iterator	elementAt(std::list<int>& base, int index);
+	static std::list<int>::iterator	findIndexOf(std::list<int>& base, int index);
 
-	template <typename Iterator>
-	void mergeInsertSort(Iterator begin, Iterator end);
+	static void	sortFordJohnson(std::list<int>& list);
+	static void	sortFordJohnson(std::vector<int>& array);
 };
 
 #endif
